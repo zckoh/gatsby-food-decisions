@@ -55,7 +55,7 @@ const Homepage = ({ posts }: PostsProps) => {
             <Listing posts={posts} showTags={false} />
             <Title text="Latest dessert recipes">
                 <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>
-                    See more desserts 
+                    See more dessserts 
                 </Link>
             </Title>
             <Listing posts={posts} showTags={false} />
