@@ -6,7 +6,22 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    // Used for the title template on pages other than the index site
+    siteTitle: `Food Decisions`,
+    // Default title of the page
+    siteTitleAlt: `Food Decisions`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `Food Decisions - List of sweet & savoury recipes to help you decide what to eat/cook!`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `https://food-decisions.vercel.app/`,
+    // Used for SEO
+    siteDescription: `Food Decisions - List of sweet & savoury recipes to help you decide what to eat/cook!`,
+    // Will be set on the <html /> tag
+    siteLanguage: `en`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/banner.jpg`,
+    // Twitter Handle
+    author: `@zckoh`,
   },
   plugins: [
     {
@@ -19,18 +34,26 @@ module.exports = {
             slug: `/blog`,
           },
           {
+            title: `Savouries`,
+            slug: `/savouries`,
+          },
+          {
+            title: `Sweets`,
+            slug: `/sweets`,
+          },
+          {
             title: `About`,
             slug: `/about`,
           },
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            name: `GitHub`,
+            url: `https://github.com/zckoh`,
           },
           {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            name: `LinkedIn`,
+            url: `https://www.linkedin.com/in/zackoh`,
           },
         ],
       },
